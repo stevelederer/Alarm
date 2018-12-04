@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B195AC121B73E3B00AC22C2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B195AC021B73E3B00AC22C2 /* RootViewController.swift */; };
 		1B7C623D21B356AA00615189 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C623C21B356AA00615189 /* AppDelegate.swift */; };
 		1B7C624221B356AA00615189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B7C624021B356AA00615189 /* Main.storyboard */; };
 		1B7C624421B356AB00615189 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7C624321B356AB00615189 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B195AC021B73E3B00AC22C2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Alarm/ViewControllers/RootViewController.swift; sourceTree = SOURCE_ROOT; };
 		1B7C623921B356AA00615189 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7C623C21B356AA00615189 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B7C624121B356AA00615189 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				1B7C624E21B3576D00615189 /* AlarmListTableViewController.swift */,
 				1B7C625021B357DF00615189 /* AlarmDetailTableViewController.swift */,
 				1B7C625221B3589B00615189 /* SwitchTableViewCell.swift */,
+				1B195AC021B73E3B00AC22C2 /* RootViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				1B7C625121B357DF00615189 /* AlarmDetailTableViewController.swift in Sources */,
 				1B7C625321B3589B00615189 /* SwitchTableViewCell.swift in Sources */,
 				1B7C625521B35E1100615189 /* Alarm.swift in Sources */,
+				1B195AC121B73E3B00AC22C2 /* RootViewController.swift in Sources */,
 				1B7C623D21B356AA00615189 /* AppDelegate.swift in Sources */,
 				1B7C624F21B3576D00615189 /* AlarmListTableViewController.swift in Sources */,
 				1B7C625C21B364D600615189 /* AlarmController.swift in Sources */,

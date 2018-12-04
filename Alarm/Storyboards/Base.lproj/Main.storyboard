@@ -16,7 +16,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v1k-C8-ABc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.46354502439498901" green="0.83997112512588501" blue="0.44694024324417114" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchTableViewCell" rowHeight="81" id="LUv-BA-pLj" customClass="SwitchTableViewCell" customModule="Alarm" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="81"/>
@@ -25,28 +26,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gsK-57-7tl">
-                                            <rect key="frame" x="16" y="11" width="343" height="59"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="KD2-ly-2Pu">
+                                            <rect key="frame" x="16" y="8" width="343" height="64.666666666666671"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-9a-9CO">
-                                                    <rect key="frame" x="0.0" y="5.3333333333333321" width="286" height="48.666666666666671"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="xRf-gN-mie">
+                                                    <rect key="frame" x="0.0" y="0.0" width="229" height="64.666666666666671"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;6:30 AM&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiU-Du-9rE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="20.333333333333332"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&lt;12:30 PM&gt;" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiU-Du-9rE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="229" height="49"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Wake Up for Class&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjO-P6-EzV">
-                                                            <rect key="frame" x="0.0" y="28.333333333333336" width="286" height="20.333333333333336"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&lt;Wake Up for Class&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjO-P6-EzV">
+                                                            <rect key="frame" x="0.0" y="49" width="149.66666666666666" height="15.666666666666671"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                                 <switch opaque="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5f-VP-n0S">
-                                                    <rect key="frame" x="294" y="14" width="51" height="31"/>
+                                                    <rect key="frame" x="294" y="17" width="51" height="31"/>
+                                                    <color key="thumbTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <connections>
                                                         <action selector="switchValueChanged:" destination="LUv-BA-pLj" eventType="valueChanged" id="g0a-lV-SY0"/>
                                                     </connections>
@@ -54,13 +56,15 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="gsK-57-7tl" secondAttribute="bottom" id="3yo-YQ-iuN"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="gsK-57-7tl" secondAttribute="trailing" id="8FX-FQ-Cz8"/>
-                                        <constraint firstItem="gsK-57-7tl" firstAttribute="top" secondItem="z3o-cC-T5q" secondAttribute="topMargin" id="YLD-pd-VpL"/>
-                                        <constraint firstItem="gsK-57-7tl" firstAttribute="leading" secondItem="z3o-cC-T5q" secondAttribute="leadingMargin" id="vId-fK-hmE"/>
+                                        <constraint firstAttribute="bottom" secondItem="KD2-ly-2Pu" secondAttribute="bottom" constant="8" id="UTe-UG-nvd"/>
+                                        <constraint firstItem="KD2-ly-2Pu" firstAttribute="leading" secondItem="z3o-cC-T5q" secondAttribute="leading" constant="16" id="VwZ-Hv-gco"/>
+                                        <constraint firstAttribute="trailing" secondItem="KD2-ly-2Pu" secondAttribute="trailing" constant="16" id="cou-A9-4Tq"/>
+                                        <constraint firstItem="KD2-ly-2Pu" firstAttribute="top" secondItem="z3o-cC-T5q" secondAttribute="top" constant="8" id="efA-e7-9r3"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="alarmSwitch" destination="h5f-VP-n0S" id="jlW-x5-2di"/>
                                     <outlet property="nameLabel" destination="YjO-P6-EzV" id="sdt-hR-hE8"/>
@@ -106,6 +110,7 @@
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="S33-1q-xkh">
                                                     <rect key="frame" x="16" y="11" width="343" height="202"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="565402353.90516496">
                                                         <!--2018-12-02 00:12:33 +0000-->
                                                     </date>
@@ -118,6 +123,7 @@
                                                 <constraint firstItem="S33-1q-xkh" firstAttribute="leading" secondItem="P3d-QE-bEo" secondAttribute="leadingMargin" id="l5X-Gz-7F4"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -130,7 +136,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alarm Name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpR-Bi-IgL">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Alarm Name..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qpR-Bi-IgL">
                                                     <rect key="frame" x="16" y="11" width="343" height="22"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -201,14 +207,20 @@
             </objects>
             <point key="canvasLocation" x="2109.375" y="20.070422535211268"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Root View Controller-->
         <scene sceneID="21y-gT-Voc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HuH-z5-c3q" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HuH-z5-c3q" customClass="RootViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DNr-K6-yDS">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DNr-K6-yDS">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

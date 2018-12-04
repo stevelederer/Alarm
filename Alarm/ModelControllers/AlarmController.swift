@@ -9,12 +9,12 @@
 import Foundation
 import UserNotifications
 
-var mockAlarms = {
-    [Alarm(fireDate: Date(timeIntervalSinceNow: 100 * 60), name: "Wake Up", enabled: true),
-     Alarm(fireDate: Date(timeIntervalSinceNow: 900 * 60), name: "Gym", enabled: true),
-     Alarm(fireDate: Date(timeIntervalSinceNow: 1200 * 60), name: "Class", enabled: true)
-    ]
-}
+//var mockAlarms = {
+//    [Alarm(fireDate: Date(timeIntervalSinceNow: 100 * 60), name: "Wake Up", enabled: true),
+//     Alarm(fireDate: Date(timeIntervalSinceNow: 900 * 60), name: "Gym", enabled: true),
+//     Alarm(fireDate: Date(timeIntervalSinceNow: 1200 * 60), name: "Class", enabled: true)
+//    ]
+//}
 
 protocol AlarmScheduler {
     func scheduleUserNotifications(for alarm: Alarm)
@@ -31,8 +31,8 @@ extension AlarmScheduler {
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
         let request = UNNotificationRequest(identifier: alarm.uuid, content: alarmNotification, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (error) in
-            if let error = error{
-                print(error, error.localizedDescription)
+            if let error = error {
+                print("💩 There was an error in \(#function) ; \(error) ; \(error.localizedDescription) 💩")
             }
         }
     }
@@ -50,10 +50,9 @@ class AlarmController: AlarmScheduler {
     var alarms: [Alarm] = []
     
     init() {
-        self.alarms = mockAlarms()
+        //        self.alarms = mockAlarms()
         loadFromPersistentStore()
     }
-    
     
     // MARK: - CRUD functions
     @discardableResult
@@ -61,6 +60,7 @@ class AlarmController: AlarmScheduler {
         let alarm = Alarm(fireDate: fireDate, name: name, enabled: enabled)
         alarms.append(alarm)
         saveToPersistentStore()
+        scheduleUserNotifications(for: alarm)
         return alarm
     }
     
@@ -75,6 +75,7 @@ class AlarmController: AlarmScheduler {
         let alarm = alarm
         guard let indexPath = alarms.index(of: alarm) else { return }
         alarms.remove(at: indexPath)
+        cancelUserNotifications(for: alarm)
         saveToPersistentStore()
     }
     
