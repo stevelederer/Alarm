@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) {
+            (granted, error) in
+        }
+        
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { (settings) in
+            guard settings.authorizationStatus == .authorized else { return }
+        }
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+//        userNotificationCenter(center, willPresent: UNNotification, withCompletionHandler: ([.alert, .sound]))
+        
+        
         // Override point for customization after application launch.
         return true
     }
