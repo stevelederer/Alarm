@@ -9,13 +9,6 @@
 import Foundation
 import UserNotifications
 
-//var mockAlarms = {
-//    [Alarm(fireDate: Date(timeIntervalSinceNow: 100 * 60), name: "Wake Up", enabled: true),
-//     Alarm(fireDate: Date(timeIntervalSinceNow: 900 * 60), name: "Gym", enabled: true),
-//     Alarm(fireDate: Date(timeIntervalSinceNow: 1200 * 60), name: "Class", enabled: true)
-//    ]
-//}
-
 protocol AlarmScheduler {
     func scheduleUserNotifications(for alarm: Alarm)
     func cancelUserNotifications(for alarm: Alarm)
@@ -50,7 +43,6 @@ class AlarmController: AlarmScheduler {
     var alarms: [Alarm] = []
     
     init() {
-        //        self.alarms = mockAlarms()
         loadFromPersistentStore()
     }
     

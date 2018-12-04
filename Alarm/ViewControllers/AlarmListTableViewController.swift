@@ -18,19 +18,14 @@ class AlarmListTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-    // MARK: - Table view data source
     
+    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AlarmController.shared.alarms.count
     }
 
-
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchTableViewCell") as? SwitchTableViewCell else { fatalError() }
-//            let time = cell.viewWithTag(1) as? UILabel,
-//            let title = cell.viewWithTag(2) as? UILabel,
-//            let enabled = cell.viewWithTag(3) as? UISwitch else { return UITableViewCell() }
         let alarm = AlarmController.shared.alarms[indexPath.row]
         cell.alarm = alarm
         cell.delegate = self
@@ -46,25 +41,22 @@ class AlarmListTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToAlarmDetailView" {
             guard let indexPath = tableView.indexPathForSelectedRow, let destinationVC = segue.destination as? AlarmDetailTableViewController else { return }
             let alarm = AlarmController.shared.alarms[indexPath.row]
             destinationVC.alarm = alarm
         }
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    
 }
 
 extension AlarmListTableViewController: SwitchTableViewCellDelegate {
     func switchCellSwitchValueChanged(cell: SwitchTableViewCell) {
         guard let indexPath = tableView.indexPath(for: cell) else { return }
         let alarmFromSourceOfTruth = AlarmController.shared.alarms[indexPath.row]
+        tableView.beginUpdates()
         AlarmController.shared.toggleEnabled(for: alarmFromSourceOfTruth)
         cell.alarm = alarmFromSourceOfTruth
-        tableView.reloadData()
+        tableView.endUpdates()
     }
 }
