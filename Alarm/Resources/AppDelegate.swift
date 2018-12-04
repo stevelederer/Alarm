@@ -28,9 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UNUserNotificationCenter.current().delegate = self
         
-//        userNotificationCenter(center, willPresent: UNNotification, withCompletionHandler: ([.alert, .sound]))
-        
-        
         // Override point for customization after application launch.
         return true
     }

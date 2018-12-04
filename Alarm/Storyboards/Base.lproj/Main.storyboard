@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Alarm List Table View Controller-->
+        <!--Alarms-->
         <scene sceneID="HbH-Mt-cOC">
             <objects>
                 <tableViewController id="1Ll-JZ-bCP" customClass="AlarmListTableViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,7 @@
                             <outlet property="delegate" destination="1Ll-JZ-bCP" id="CeO-Rz-KVv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="88e-GD-SBN">
+                    <navigationItem key="navigationItem" title="Alarms" id="88e-GD-SBN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dIj-n0-An8">
                             <connections>
                                 <segue destination="Akx-Us-7Tz" kind="show" id="gCD-3c-SW7"/>
@@ -149,7 +149,7 @@
                             </tableViewSection>
                             <tableViewSection id="4p6-1z-vQ9">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pi2-eP-vLd">
+                                    <tableViewCell clipsSubviews="YES" clearsContextBeforeDrawing="NO" tag="3" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pi2-eP-vLd">
                                         <rect key="frame" x="0.0" y="375" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pi2-eP-vLd" id="Sj4-Gv-sxC">
@@ -158,8 +158,8 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdl-Gp-Oje">
                                                     <rect key="frame" x="16" y="11" width="343" height="22"/>
-                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <state key="normal" title="Disabled">
+                                                    <color key="backgroundColor" red="0.58292996883392334" green="0.82481962442398071" blue="0.4193645715713501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Alarm is On">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -192,6 +192,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="alarmNameTextField" destination="qpR-Bi-IgL" id="TcE-B6-s1c"/>
+                        <outlet property="buttonCell" destination="pi2-eP-vLd" id="Z2r-LY-GyC"/>
                         <outlet property="enableButton" destination="hdl-Gp-Oje" id="evt-oj-Whb"/>
                         <outlet property="timePicker" destination="S33-1q-xkh" id="Mjs-Fi-anQ"/>
                     </connections>
